@@ -1,8 +1,9 @@
-require_relative "client/version"
+require "dry-configurable"
 
 module Houston
-  module Client
-    class Error < StandardError; end
-    # Your code goes here...
+  class Client
+    extend Dry::Configurable
+
+    setting :url
   end
 end

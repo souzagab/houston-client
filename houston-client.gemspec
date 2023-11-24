@@ -1,8 +1,8 @@
-require_relative "lib/houston/client/version"
+require_relative "lib/houston/version"
 
 Gem::Specification.new do |spec|
   spec.name = "houston-client"
-  spec.version = Houston::Client::VERSION
+  spec.version = Houston::VERSION
   spec.authors = ["Gabriel S."]
   spec.email = ["me@souzagab.com"]
 
