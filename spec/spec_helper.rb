@@ -1,4 +1,4 @@
-require "houston/client"
+require "houston"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

@@ -32,6 +32,9 @@ Gem::Specification.new do |spec|
   # Thread safe configuration
   spec.add_dependency "dry-configurable", "~> 1.1"
 
+  # HTTP Client
+  spec.add_dependency "http", "~> 5.1"
+
   # For more information and examples about making a new gem, check out our
   # guide at: https://bundler.io/guides/creating_gem.html
   spec.metadata["rubygems_mfa_required"] = "true"
