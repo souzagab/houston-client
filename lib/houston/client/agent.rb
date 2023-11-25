@@ -1,4 +1,6 @@
 require "dry-configurable"
+require "http"
+require "json"
 
 module Houston
   module Client
@@ -29,7 +31,7 @@ module Houston
         def base_url
           raise ConfigurationError, "Houston::Client::Agent.url is not configured" unless config.url
 
-          config.url
+          URI.parse(config.url)
         end
 
         def http
