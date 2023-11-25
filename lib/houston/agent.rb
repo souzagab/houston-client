@@ -1,5 +1,5 @@
 require "http"
-
+require "json"
 
 module Houston
   module Agent
@@ -8,13 +8,17 @@ module Houston
     def get(path, params = {})
       url = "#{base_url}/#{path}"
 
-      http.get(url, params:)
+      response = http.get(url, params)
+
+      parse_response(response)
     end
 
-    def post(path, body = {})
+    def post(path, params = {})
       url = "#{base_url}/#{path}"
 
-      http.post(url, body:)
+      response = http.post(url, json: params)
+
+      parse_response(response)
     end
 
     private
@@ -24,7 +28,13 @@ module Houston
     end
 
     def http
-      HTTP.headers("User-Agent" => "MyApp/1.0.0").accept(:json)
+      HTTP
+        .headers("User-Agent" => "MyApp/1.0.0")
+        .accept(:json)
+    end
+
+    def parse_response(response)
+      JSON.parse(response.body.to_s, symbolize_names: true)
     end
   end
 end

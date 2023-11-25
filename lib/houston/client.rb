@@ -1,6 +1,7 @@
 require "dry-configurable"
 
 require_relative "agent"
+require_relative "mission"
 
 module Houston
   class Client
