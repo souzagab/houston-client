@@ -24,6 +24,8 @@ module Houston
     private
 
     def base_url
+      raise Houston::ConfigurationError, "Houston::Client.config.url is not set" unless Houston::Client.config.url
+
       URI(Houston::Client.config.url)
     end
 
