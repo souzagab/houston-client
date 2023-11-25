@@ -1,5 +1,16 @@
+require "spec_helper"
+
 RSpec.describe Houston::Client do
-  it "has a version number" do
-    expect(Houston::VERSION).not_to be_nil
+  describe "configurations" do
+
+    describe ".url" do
+      let(:url) { "https://example.com" }
+
+      before { described_class.configure { |config| config.url = url } }
+
+      it "returns the configured URL" do
+        expect(described_class.config.url).to eq(url)
+      end
+    end
   end
 end
