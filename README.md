@@ -8,13 +8,24 @@ Add to the application's Gemfile by adding:
 
 ```ruby
 
-    gem "houston-client", github: "souzagab/houston-client"
+  gem "houston-client", github: "souzagab/houston-client"
+
+```
+
+And you can configure the gem by adding an initializer to your Rails application:
+
+```ruby
+
+  # config/initializers/houston_client.rb
+
+  Houston::Client::Agent.configure do |config|
+    config.url = "https://houston.api.com"
+  end
 
 ```
 
 ## Usage
 
-TODO
 
 ## Development
 
