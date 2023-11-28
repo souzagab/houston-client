@@ -11,3 +11,6 @@ console: setup # Spin up a console with all dependencies loaded
 docs: # Generate documentation and start a server to view it
 	bundle exec yardoc
 	yard server --reload
+
+test: # Run all tests
+	bundle exec rspec

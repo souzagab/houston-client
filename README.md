@@ -26,6 +26,7 @@ And you can configure the gem by adding an initializer to your Rails application
 
 ## Usage
 
+This gem is documented using [YARD](https://yardoc.org/). You can generate a local copy of the documentation by running `yard` in the root of the project.
 
 ## Development
 
