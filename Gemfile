@@ -12,3 +12,5 @@ gem "rubocop", "~> 1.21"
 gem "rubocop-rspec", "~> 2.25"
 
 gem "rubocop-performance", "~> 1.19"
+
+gem "yard", "~> 0.9.34"
